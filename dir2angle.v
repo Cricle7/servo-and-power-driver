@@ -20,7 +20,9 @@ always @(posedge clk or negedge nrst) begin
             angle <= POS_ANGLE;
         end else if (neg_dir) begin
             angle <= NEG_ANGLE;
-        end
+        end else begin
+			angle <= CENTER_ANGLE;
+		end
     end
 end
 

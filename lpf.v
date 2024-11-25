@@ -1,12 +1,10 @@
-`define WIDTH 16
-
 module lpf(
     input wire clk,          // 时钟信号
     input wire clk_samp,     // 采样时钟
     input wire nrst,         // 复位信号
 
-    input signed reg [`WIDTH-1:0] in,
-    output signed reg [`WIDTH-1:0] out
+    input   [15:0] in,
+    output  reg [15:0] out
 );
 
     always @(posedge clk or negedge nrst) begin
